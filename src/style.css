@@ -1,0 +1,901 @@
+
+/*_____бокова____*/
+.rocket-container {
+    position: fixed;
+    right: 20px;
+    top: 0;
+    width: 50px;
+    height: 100vh;
+    z-index: 9999;
+    pointer-events: none;
+}
+  
+.rocket-icon {
+    position: absolute;
+    width: 40px;
+    transition: top 0.2s ease-out;
+    animation: rocket-fly 1.2s infinite ease-in-out;
+}
+  
+
+@keyframes rocket-fly {
+    0%, 100% {
+      transform: translateX(0) rotate(0deg);
+    }
+    50% {
+      transform: translateX(-3px) rotate(-2deg);
+    }
+}
+  
+/*___збільшення тексту______*/
+
+
+.high-contrast {
+    background-color: #000 !important;
+    color: #fff !important;
+}
+.nav-links {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+  
+.nav-links a {
+    text-decoration: none;
+    color: inherit;
+    padding: 0.4em 0.8em;
+    border-radius: 4px;
+}
+.nav-links a:hover,
+.nav-links .contrast-toggle:hover {
+  border-color: white;
+  color: gray;
+}
+.contrast-toggle {
+    background: none;
+    cursor: pointer;
+    color: inherit;
+    font-size: 1.2rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+  
+
+/*___________________Спільні__________________________*/
+
+html, body, #root {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: 
+        rgba(32, 30, 30, 0);
+    text-align: center;
+    transition: font-size 0.3s ease;
+}
+html.large-font {
+    font-size: 120%;
+}
+.side {
+    position: fixed;
+    top: 0;
+    width: 20%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+.page-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+.left { left: 0; background-image: url('assets/cosmosback.jpg'); }
+.right { right: 0; background-image: url('assets/cosmosback.jpg'); }
+.img {
+    width: 70%;
+}
+
+.container {
+    width: 60%;
+    margin: 0 auto;
+    margin-top: 10%;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-family: sans-serif;
+}
+.background {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+header {
+    padding: 90px;
+    height: 99px;
+    font-size: 4rem;
+    color: white;
+    background: rgb(8, 0, 0);
+}
+header h1 {
+    margin: 0 0 0rem 0;
+    font-size: 3rem;
+}
+
+.cosmos-back {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: 
+        linear-gradient(rgba(0, 0, 0, 0.507), rgba(0, 0, 0, 0.5)),
+        url('./assets/cosmosback.jpg');
+    background-size: cover;
+    z-index: -1;
+    text-align: center;
+}
+
+nav a {
+    color: rgb(255, 255, 255);
+    margin: 45px;
+    text-decoration: none;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+}
+
+a {
+    position: relative;
+    text-decoration: none;
+    color: #000;
+    font-size: 1.2rem;
+    padding: 5px 10px;
+    border: 2px solid transparent;
+    transition: all 0.3s ease-in-out;
+}
+
+a:hover {
+    color: #fff;
+    text-decoration-color: white;
+}
+
+h1 {
+    margin-top: 0px;
+    display: block; 
+    color: white; 
+    text-transform: uppercase;
+    font-family: italic;
+    font-size: 3rem;
+}
+h2 {
+    color: white; 
+    font-family: italic;
+    font-size: 1.3rem;
+}
+
+
+/*___________________Головна__________________________*/
+
+.welcome-text {
+    font-weight: 100px;
+    font-size: 5rem;
+    font-style: italic;
+    font-family: 'Amaze';
+    color: rgb(153, 125, 125);
+    text-align: center;
+    margin-top: 250px;
+    margin-bottom: 700px;
+}
+.fade-in {
+    opacity: 0;
+    display: inline-block;
+    animation: fadeIn 0.5s forwards;
+}
+
+.additional-info {
+    padding: 20px 0; 
+    background-color: rgb(2, 2, 2);
+    color: white;
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    z-index: 1;
+}
+
+.main-text {
+    margin-top: 100px;
+    display: block; 
+    color: white; 
+    text-transform: uppercase;
+    font-family: italic;
+    font-size: 3rem;
+}
+
+.info-section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.8s ease-in-out;
+    display: flex;
+    text-align: justify;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 40px;
+    max-width: 1250px;
+    margin: 20px auto;
+    padding: 10px;
+}
+  
+.info-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+  
+.info-section.reverse {
+    flex-direction: row-reverse;
+}
+  
+.info-text{
+    font-size: 2rem;
+    font-weight: bold;
+    color: #c5bfbf;
+    z-index: 1;
+    text-shadow: 1px 1px 2px rgba(224, 221, 221, 0.356);
+}
+  
+  
+.info-image {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border: 2px solid #eee;
+    height: 500px;
+    width: 750px;
+    transition: transform 0.3s;
+}
+  
+.info-image:hover {
+    transform: scale(1.05);
+}
+
+/*___________________планети__________________________*/
+
+.back-button {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(135deg, #676868, #181818);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+.back-button:hover {
+    background-color: #ffffff;
+    border: blue;
+    background: linear-gradient(135deg, #83cccc, #19125a);
+    border-radius: 8px;
+    color:#8cc5ff;
+}
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.planets {
+    
+    top: 300px;
+    width: 1500px;
+}
+.planet-container {
+    text-align: center;
+    padding: 20px;
+}
+  
+.planet-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+  
+.planet-image {
+    width: 300px; 
+    height: auto;
+    border-radius: 80px; 
+    margin-bottom: 10px;
+    border-color: #f0f0f0;
+    box-shadow: 10px 10px 5px rgba(70, 70, 70, 0.5);
+}
+.planet-name {
+    color: #a89b9b;
+    margin-bottom: 40px;
+    margin-top: 30px;
+    font-style: italic;
+    text-transform: uppercase;  
+    font-size: 2rem;
+}
+.planet-description {
+    font-size: 1.2rem;
+    max-width: 500px;
+    text-align: center;
+    font-style: italic;
+    color: white;
+}
+.planet-description2 {
+    font-size: 1.3rem;
+    display: flex;
+    max-width: 500px;
+    text-align: center;
+    justify-content: space-between;
+    color: white;
+}
+
+/*___________________зорі__________________________*/
+
+.stars-box {
+    width: 60%;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    text-align: center;
+    border-radius: 10px;
+    
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  }
+
+  .stars-grid {
+    display: flex;
+    flex-direction: column;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+  }
+  
+.star-card {
+    display: flex;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+  }
+  
+.star-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-right: 15px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+  }
+  
+.star-info {
+    text-align: left;
+ }
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.page-button {
+  padding: 10px 15px;
+  font-size: 1rem;
+  cursor: pointer;
+  background-color: #5e3f70;
+  border: 1px solid #000000;
+  border-radius: 5px;
+}
+
+.page-button.active {
+  background-color: #22172c;
+  color: rgb(158, 151, 151);
+}
+
+.page-button:hover {
+  background-color: #6b4481;
+}
+
+
+.stars-container {
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+  
+.search-input {
+    padding: 8px;
+    font-size: 1rem;
+    width: 200px;
+    border: 1px solid #000000;
+    border-radius: 4px;
+}
+
+/*___________________місяць__________________________*/
+
+.phases {
+    padding: 15px;
+    color:#f8f8f8;
+    font-family: italic;
+    font-size: 1.4rem;
+    margin-bottom: 50px;
+}
+
+.moon {
+    width: 60%;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+
+.moon-info-section {
+    /*display: flex;*/
+    line-height: 1.5;
+    display: block;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    margin-bottom: 24px;
+    border-bottom: 1px solid #334155;
+    padding-bottom: 16px;
+    gap: 16px;
+}
+  
+.moon-info-text {
+    flex: 1 1 250px;
+    font-size: 1.3rem;
+    color: #e2e8f0;
+}
+  
+.moon-info-text h2 {
+    font-size: 1.3rem;
+    margin-bottom: 8px;
+    color: #facc15;
+}
+  
+.moon-info-text p {
+    font-size: 1.3rem;
+    line-height: 1.5;
+}
+  
+.moon-info-image {
+    flex: 0 0 120px;
+    max-width: 420px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+}
+
+.moon-info-image:hover {
+    transform: scale(1.10);
+}
+
+.moon-additional-text {
+    color: white;
+    font-size: 1.5rem;
+    font-style:italic;
+    font-family: sans-serif;
+    margin-bottom: 50px;
+}
+
+.video-container {
+    size: 300px;
+    margin-top: 50px;
+    margin-bottom: 150px;
+}
+
+
+
+/*_______________________________форум_______________________________-*/
+
+.chat-container {
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    padding: 20px;
+    background: #222;
+    color: white;
+    border-radius: 10px;
+}
+  
+.messages {
+    height: 300px;
+    overflow-y: auto;
+    border: 1px solid #444;
+    padding: 10px;
+    background: #333;
+}
+  
+.message {
+    padding: 5px;
+    border-bottom: 1px solid #555;
+}
+  
+input, button {
+    margin-top: 10px;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    color: #00000075;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: white;
+    color: black;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 5px;
+}
+.bottom {
+    width: 100%;
+    background-color: #000;
+    color: rgb(100, 87, 87);
+    height: 5%;
+    position: fixed;
+    bottom: 0;
+}
+.input {
+    background-color: #e2ddddce;
+    color: #000000;
+}
+
+area {
+    cursor: pointer;
+  }
+
+.btn-switch {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    background-color: #9900ff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+.btn-switch:hover {
+    background-color: #dca7ff;
+}
+.app-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+.register {
+    color: white;
+    background-color: #0000006e;
+    width: 90%;
+    font-size: 1.3rem;
+}
+.login {
+    color: white;
+    background-color: #0000006e;
+    width: 90%;
+    font-size: 1.3rem;
+}
+.h3 {
+    font-style: italic;
+}
+.a:hover {
+    background-color: rgb(134, 134, 160);
+}
+
+.forum-box {
+    width: 60%;
+    position: relative;
+    margin: 50px auto;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    max-width: 1000px;
+    margin-bottom: 50px;
+}
+
+.create-post-container {
+    margin-top: 20px;
+    margin-bottom: 70px;
+    display: flex;
+    justify-content: center;
+}
+.button-post-create {
+    background-color: #9900ff4d;
+    color: white;
+    font-size: 1.2rem;
+    width: 250px;
+    height: 70px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.button-post-create:hover {
+    background-color: #9fb9d363;
+}
+.topic-title {
+    margin-top: 40px;
+    display: block; 
+    color: white; 
+    text-transform: uppercase;
+    font-family: italic;
+    font-size: 3.3rem;
+}
+
+.topic-content {
+    margin-top: 50px;
+    display: block; 
+    color: white; 
+    font-family: italic;
+    font-size: 2rem;
+}
+
+.comments-title {
+    margin-top: 60px;
+    display: block; 
+    color: rgba(255, 255, 255, 0.575); 
+    text-transform: lowercase;
+    font-family: italic;
+    font-size: 3rem;
+}
+
+.comments {
+    margin-top: 30px;
+    display: block; 
+    color: rgba(255, 255, 255, 0.575); 
+    text-transform: lowercase;
+    font-family: italic;
+    font-size: 1.2rem;
+}
+
+.topic-page {
+    width: 60%;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: rgba(89, 2, 92, 0.055);
+    color: white;
+    text-align: center;
+    border-radius: 10px;
+    
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.post-item {
+    padding: 12px 16px;
+    max-width: 1000px;
+    border-bottom: 1px solid #ccc;
+  }
+  
+.post-item:last-child {
+    border-bottom: none;
+}
+  
+.post-item h3 {
+    margin: 0;
+    color: #007bff;
+    font-size: 1.2rem;
+}
+.post-title-text {
+    color: rgb(110, 110, 150);
+    padding-top: 50px;
+    font-family: sans-serif;
+    font-weight: 100px;
+    font-size: 1.4rem;
+}
+.post-title-text:hover {
+    color: wheat;
+}
+.post-item h3:hover {
+    color: #007bff;
+}
+  
+.forum-container {
+    margin-bottom: 50px;
+    width: 1000px;
+}
+
+.additional-info {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #000000;
+    border-radius: 16px;
+}
+  
+.post-header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 19px;
+}
+  
+.post-author {
+    font-weight: bold;
+}
+  
+.post-date {
+    font-style: italic;
+}
+
+.comment-box {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    background-color: #212124d2;
+}
+  
+.comment-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+  font-size: 0.9rem;
+  color: #555;
+  
+}
+
+.comment-author {
+  font-weight: bold;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.603);
+}
+
+.comment-date {
+  font-style: italic;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.603);
+}
+
+.add-comment {
+  margin-top: 20px;
+}
+
+.add-comment textarea {
+  width: 50%;
+  color: #888888;
+  background-color: #212124d2;
+  height: 60px;
+  padding: 10px;
+  margin-bottom: 10px;
+  resize: vertical;
+}
+
+.add-comment button {
+  padding: 8px 16px;
+  cursor: pointer;
+  background-color: #9900ff4d;
+  color: white;
+  font-size: 1rem;
+}
+
+.add-comment button:hover {
+    background-color: #9fb9d363;
+}
+
+.block-button {
+    background-color: #ffa500;
+    color: white;
+    border: none;
+    padding: 4px 10px;
+    border-radius: 5px;
+    margin-left: 5px;
+    cursor: pointer;
+  }
+
+.block-button:hover {
+    background-color: #cc8400;
+}
+
+.delete-post-button {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-top: 8px;
+    margin-bottom: 40px;
+    cursor: pointer;
+  }
+  
+.delete-post-button:hover {
+    background-color: #c0392b;
+}
+  
+.star-img:hover {
+    transform: scale(1.75);
+    transform-origin: right;
+}
+
+.delete-button {
+    color: rgb(255, 255, 255);
+    background-color: rgb(94, 52, 52);
+}
+
+.delete-button:hover {
+    background-color: rgb(71, 39, 39);
+}
+
+.create-topic {
+    color: white;
+    background-color: #0000006e;
+    width: 90%;
+    font-size: 1.3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.theme_name {
+    background-color: #333131a2;
+    font-size: 1.3rem;
+    width: 90%;
+    text-align: center;
+    color:white;
+}
+
+.description{
+    background-color: #333131a2;
+    font-size: 1.3rem;
+    margin-top: 0.5em;
+    width: 91%;
+    border: none;
+    color: white;
+    font-family: Arial, sans-serif;
+    padding: 0.4rem 0.4rem 0.4rem 0.4rem;
+}
+
+.create {
+    background-color: #9900ff4d;
+    color: white;
+    font-size: 1.2rem;
+    width: 350px;
+    height: 70px;
+    margin-top: 2rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.create:hover {
+    background-color: #d49afc4d;
+    color: plum;
+
+}
+.return {
+    background-color: #ff00004d;
+    color: white;
+    font-size: 1.2rem;
+    margin-top: 2rem;
+    width: 350px;
+    display: table-column;
+    height: 70px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.return:hover {
+    background-color: #ff75754d;
+    color: red;
+}
+
+/*_____________map_______________*/
+
+.sky-map{
+    color: white;
+    background-color: white;
+    border-radius: 2rem;
+    border-color: white;
+}
