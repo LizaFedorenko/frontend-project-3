@@ -891,11 +891,8 @@ area {
     color: red;
 }
 
-/*_____________map_______________*/
+/*________________________________________________________ABOUT_________________*/
 
-.sky-map{
-    color: white;
-    background-color: white;
-    border-radius: 2rem;
-    border-color: white;
+.weather_icon {
+    margin-top: 150px;
 }
